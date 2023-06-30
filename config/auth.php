@@ -60,14 +60,29 @@ return [
     */
 
     'providers' => [
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\User::class,
+        // ],
+
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'driver' => 'database',
+            'table' => 'users',
         ],
 
-        // 'users' => [
+        // 'admins' => [
         //     'driver' => 'database',
-        //     'table' => 'users',
+        //     'table' => 'admin', // Replace 'admins' with your admin table name
+        // ],
+
+        // 'managers' => [
+        //     'driver' => 'database',
+        //     'table' => 'manager', // Replace 'managers' with your manager table name
+        // ],
+
+        // 'employees' => [
+        //     'driver' => 'database',
+        //     'table' => 'employee', // Replace 'employees' with your employee table name
         // ],
     ],
 

@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Admin\Auth\AdminAuthenticatedSessionController;
+use App\Http\Controllers\Employee\Auth\EmployeeAuthenticatedSessionController;
+use App\Http\Controllers\Manager\Auth\ManagerAuthenticatedSessionController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Login Routes
+// Route::get('/admin-login', [AuthenticatedSessionController::class, 'create'])->name('login');
+//Route::post('/admin-login', [AuthenticatedSessionController::class, 'store']);--
+
+// Route::get('/employee-login', [AuthenticatedSessionController::class, 'create'])->name('login');
+//Route::post('/employee-login', [AuthenticatedSessionController::class, 'store']);
+
+// Route::get('/manager-login', [AuthenticatedSessionController::class, 'create'])->name('login');
+//Route::post('/manager-login', [AuthenticatedSessionController::class, 'store']);
+
+
 
 Route::get('/', function () {
     return view('welcome');
