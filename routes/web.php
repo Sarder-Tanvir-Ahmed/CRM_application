@@ -18,15 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Login Routes
-// Route::get('/admin-login', [AuthenticatedSessionController::class, 'create'])->name('login');
-//Route::post('/admin-login', [AuthenticatedSessionController::class, 'store']);--
-
-// Route::get('/employee-login', [AuthenticatedSessionController::class, 'create'])->name('login');
-//Route::post('/employee-login', [AuthenticatedSessionController::class, 'store']);
-
-// Route::get('/manager-login', [AuthenticatedSessionController::class, 'create'])->name('login');
-//Route::post('/manager-login', [AuthenticatedSessionController::class, 'store']);
 
 
 
@@ -37,5 +28,18 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/admin-dashboard', function () {
+    return view('admin-dashboard');
+})->middleware(['auth'])->name('admin.dashboard');
+
+Route::get('/employee-dashboard', function () {
+    return view('employee-dashboard');
+})->middleware(['auth'])->name('employee.dashboard');
+
+Route::get('/manager-dashboard', function () {
+    return view('manager-dashboard');
+})->middleware(['auth'])->name('manager.dashboard');
+
 
 require __DIR__.'/auth.php';

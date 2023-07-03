@@ -15,7 +15,9 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'admins',
+
+
     ],
 
     /*
@@ -40,7 +42,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'employee' => [
+            'driver' => 'session',
+            'provider' => 'employees',
+        ],
+        'manager' => [
+            'driver' => 'session',
+            'provider' => 'managers',
+        ],
+
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -70,20 +86,20 @@ return [
             'table' => 'users',
         ],
 
-        // 'admins' => [
-        //     'driver' => 'database',
-        //     'table' => 'admin', // Replace 'admins' with your admin table name
-        // ],
+        'admins' => [
+            'driver' => 'database',
+            'table' => 'admins', // Replace 'admins' with your admin table name
+        ],
 
-        // 'managers' => [
-        //     'driver' => 'database',
-        //     'table' => 'manager', // Replace 'managers' with your manager table name
-        // ],
+        'managers' => [
+            'driver' => 'database',
+            'table' => 'managers', // Replace 'managers' with your manager table name
+        ],
 
-        // 'employees' => [
-        //     'driver' => 'database',
-        //     'table' => 'employee', // Replace 'employees' with your employee table name
-        // ],
+        'employees' => [
+            'driver' => 'database',
+            'table' => 'employees', // Replace 'employees' with your employee table name
+        ],
     ],
 
     /*

@@ -36,13 +36,13 @@
             <div class="bg-blue-200 p-10 rounded-lg">
                 <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
                     <!-- Admin Login -->
-                    <form action="{{ route('login') }}" method="GET">
+                    <form action="{{ route('login.admin') }}" method="GET">
                         @csrf
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 w-full">
                             <span class="text-lg font-semibold">Admin Login</span>
                         </button>
                     </form>
-                    <form action="{{ route('register') }}" method="GET">
+                    <form action="{{ route('register.admin') }}" method="GET">
                         @csrf
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 w-full">
                             <span class="text-lg font-semibold">AR</span>
@@ -51,7 +51,7 @@
 
 
                     <!-- Employee Login -->
-                    <form action="{{ route('login') }}" method="GET">
+                    <form action="{{ route('login.employee') }}" method="GET">
                         @csrf
                         <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50 w-full">
                             <span class="text-lg font-semibold">Employee Login</span>
@@ -59,7 +59,7 @@
                     </form>
 
                     <!-- Manager Login -->
-                    <form action="{{ route('login') }}" method="GET">
+                    <form action="{{ route('login.manager') }}" method="GET">
                         @csrf
                         <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50 w-full">
                             <span class="text-lg font-semibold">Manager Login</span>

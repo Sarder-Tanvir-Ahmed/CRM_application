@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <div class="mb-4 text-lg font-medium text-gray-800">
-            Admin Login
+            Employee Login
         </div>
 
         <x-slot name="logo">
@@ -21,7 +21,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('login.admin') }}">
+        <form method="POST" action="{{ route('login.employee') }}">
             @csrf
 
             <!-- Email Address -->
